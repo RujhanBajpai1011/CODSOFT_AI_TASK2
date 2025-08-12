@@ -1,26 +1,25 @@
-# 🖼️ Image Captioning
+# 👁️ Face Detection
 
-This project demonstrates a basic **image captioning** system using a pre-trained **ResNet50** model for extracting image features.
+This project implements a simple **face detection** system using OpenCV's Haar Cascade classifiers. It identifies faces within an image and draws rectangles around them.
 
 ## **✨ Features**
 
-* **Feature Extraction**: Uses ResNet50 to get important information from images.
-* **Dummy Caption**: Currently provides a simple placeholder caption like "Generated Caption (dummy text)".
-* **Easy to Use**: Set up to be straightforward for testing image input.
+* **Face Detection**: Utilizes the pre-trained Haar Cascade classifier to detect frontal faces.
+* **Bounding Box Visualization**: Draws blue rectangles around the detected faces in the image.
+* **Image Display**: Shows the processed image with detected faces.
+* **Error Handling**: Basic handling for cases where the image cannot be read.
 
 ## **🛠️ Technologies Used**
 
 * **Python**
-* **PyTorch** (`torch`, `torchvision`): For the deep learning model.
-* **Pillow** (`PIL`): For handling image files.
+* **OpenCV** (`cv2`): For image processing and face detection.
+* `google.colab.patches.cv2_imshow`: For displaying images in Google Colab environments.
 
 ## **📦 Requirements**
 
-You'll need these Python libraries:
+You will need the following Python library:
 
-* `torch`
-* `torchvision`
-* `Pillow`
+* `opencv-python`
 
 ## **🚀 Getting Started**
 
@@ -33,23 +32,21 @@ git clone <repository_url>
 cd <repository_name>
 ```
 
-2. **Install the required Python packages:**
+2. **Install the required Python package:**
 
 ```
-pip install torch torchvision Pillow
+pip install opencv-python
 ```
 
 ### **Usage**
 
-1. **Image**: Place your image file (e.g., `image.png`) in the same folder as the notebook.
+1. **Image**: Make sure you have an image file (e.g., `Face_Sample.jpg` as referenced in the notebook) in the same directory as the Jupyter notebook (`Face_detection.ipynb`).
 
-2. **Run**: Open `Image_Captioning.ipynb` in a Jupyter environment and run all cells.
+2. **Run**: Open `Face_detection.ipynb` in a Jupyter environment (like Google Colab) and run all the cells.
 
-The notebook will then process the image and print the dummy caption.
+The notebook will then process the image, detect faces, and display the image with bounding boxes.
 
-## **🧑‍💻 Extend It!**
-
-This is a starting point. Feel free to integrate a real language model to generate meaningful captions!
+## **🧑‍💻 Contributing**
 
 Contributions are welcome! If you have suggestions for improvements, new features, or bug fixes, please feel free to:
 
